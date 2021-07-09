@@ -1,3 +1,4 @@
+//randomly generate a choice between rock/paper/scissors
 function aiPlay(){
     var seed = Math.floor(Math.random()*3);
     switch (seed){
@@ -10,6 +11,7 @@ function aiPlay(){
     }
 }
 
+//play one round of rock paper scissors using aiPlay()
 function oneRound(playerChoice, aiChoice){
     if (playerChoice.localeCompare(aiChoice, undefined, {sensitivity: 'accent'}) == 0){
         return "Tie";
@@ -24,6 +26,7 @@ function oneRound(playerChoice, aiChoice){
     }
 }
 
+//Run oneRound 5 times with playerChoice being a user input, then display results with console.log
 function game(){
     console.log("Beginning 5 rounds of rock-paper-scissors");
     for (let numRounds = 0; numRounds < 5; numRounds++){
