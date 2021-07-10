@@ -12,6 +12,7 @@ function aiPlay(){
 }
 
 //play one round of rock paper scissors using aiPlay()
+//localeCompare compares strings case insensitive
 function oneRound(playerChoice, aiChoice){
     if (playerChoice.localeCompare(aiChoice, undefined, {sensitivity: 'accent'}) == 0){
         return "Tie";
